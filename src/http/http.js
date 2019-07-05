@@ -69,7 +69,6 @@ export function post (url, data) {
       method: 'post',
       url: url,
       headers: {
-        'requestType': 'zuul',
         'content-type': 'application/json'
       },
       data: data

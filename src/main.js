@@ -1,18 +1,20 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './assets/rest.css'
-import router from './router'
-import store from './store'
+import router from './router/router'
+import store from './store/store'
 import FastClick from 'fastclick'
 import { api } from './api/api'
 import { post, get } from './http/http'
-import { Button, Toast, MessageBox, Header, Tabbar, TabItem } from 'mint-ui'
+import { Button, Toast, MessageBox, Header, Tabbar, TabItem, Search, Cell } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
 Vue.component(Button.name, Button)
 Vue.component(Header.name, Header)
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
+Vue.component(Tabbar.name, Tabbar)
+Vue.component(TabItem.name, TabItem)
+Vue.component(Search.name, Search)
+Vue.component(Cell.name, Cell)
 Vue.prototype.$toast = Toast
 Vue.prototype.$msg = MessageBox
 

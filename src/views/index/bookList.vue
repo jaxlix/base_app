@@ -2,10 +2,20 @@
     <div id="bl">
         <header class="head">
             <mt-button class="left-btn" icon="back" @click="$router.history.go(-1)">返回</mt-button>
-            <input class="input" type="text" placeholder="搜索书名/作者名">
+            <input class="input" @focus="toSearch" type="text" placeholder="搜索书名/作者名">
         </header>
     </div>
 </template>
+<script>
+export default {
+    methods: {
+        toSearch(){
+            this.$router.history.push('/search')
+        }
+    }
+}
+</script>
+
 <style lang="less" scoped>
     #bl{
         padding-top: 40px;
