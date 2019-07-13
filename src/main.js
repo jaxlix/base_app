@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './assets/rest.css'
+import vConsole from 'vconsole'
 import router from './router/router'
 import store from './store/store'
 import FastClick from 'fastclick'
@@ -17,6 +18,9 @@ Vue.component(Search.name, Search)
 Vue.component(Cell.name, Cell)
 Vue.prototype.$toast = Toast
 Vue.prototype.$msg = MessageBox
+
+let Vconsole = new vConsole()
+export default Vconsole
 
 Vue.prototype.$post = post
 Vue.prototype.$get = get
